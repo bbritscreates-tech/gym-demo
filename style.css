@@ -9,14 +9,13 @@
     background-color: rgb(30,30,30);
     width: 100%;
     height: ;
-    z-index: 999;
+    z-index: 100;
 }
 
 .nav-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: ;
 }
 
 .nav-logo {
@@ -31,53 +30,78 @@
 }
 
 .nav-links {
-    padding-right: 20px;
-    display: flex;
+  display: flex;
+  gap: 20px;
+  background: #1e1e1e;
+  padding: 10px 20px;
+  position: relative;
 }
 
-.nav-links a {
-    padding: 0 10px;
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.nav-links p {
-    padding: 0 10px;
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-}
-
-.nav-links a:hover, .dropdown:hover .dropbtn , .footer-box a:hover{
-    color: red;
+.nav-links a, .dropbtn {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #ddd;
-    min-width: 220px;
-    flex-direction: column;
-    z-index: 1000;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto; /* full width */
+  background: #ddd;
+  padding: 10px;
+  z-index: 99;
 }
 
 .dropdown-content a {
-    padding: 3px 5px;
-    display: block;
-    white-space: nowrap;
-    color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
 }
 
-.dropdown:hover .dropdown-content {
+.nav-links a:hover, .dropbtn:hover {
+  color: red;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a img {
+    width: 200px;
+    height: 200px;
     display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;             /* vertical center */
+  left: 50%;            /* horizontal center */
+  transform: translate(-50%, -50%);  /* perfect centering */
+  color: white;
+}
+
+.dropdown-content-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdown-content-box {
+    position: relative;   /* anchor for absolute positioning */
+    display: inline-block;
+}
+
+.box-text {
+    color: white;
 }
 
 .menu-toggle {
@@ -114,5 +138,9 @@ footer {
 .footer-box a {
     text-decoration: none;
     color: white;
+}
+
+.footer-box a:hover {
+    color: red;
 }
 
