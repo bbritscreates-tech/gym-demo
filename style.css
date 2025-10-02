@@ -5,11 +5,82 @@
 
 .navbar {
     position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     background-color: gray;
     width: 100%;
     height: ;
+    z-index: 999;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: ;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: ;
+}
+
+.nav-logo img {
+    width: ;
+    height: ;
+}
+
+.nav-links {
+    padding: ;
+    display: flex;
+}
+
+.nav-links a {
+    padding: 0 10px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-links p {
+    padding: 0 10px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.nav-links a:hover, .dropdown:hover .dropbtn {
+    color: #CFAF64;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ddd;
+    min-width: 220px;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    padding: 3px 5px;
+    display: block;
+    white-space: nowrap;
+    color: #2d3a63;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
 }
