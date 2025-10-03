@@ -8,7 +8,6 @@
     align-items: center;
     background-color: rgb(30,30,30);
     width: 100%;
-    height: ;
     z-index: 100;
 }
 
@@ -41,7 +40,7 @@
   color: white;
   cursor: pointer;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .dropdown {
@@ -115,9 +114,7 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     background-color: rgb(30,30,30);
-    height: ;
-    width: 100%;
-    padding: 20px 20px;
+    padding: 20px 30px;
     gap: 10px;
 }
 
@@ -125,6 +122,8 @@ footer {
     flex: 1;
     border: 1px solid white;
     text-align: center;
+    height: 240px;
+    padding: 10px 10px;
 }
 
 .footer-box h3 {
