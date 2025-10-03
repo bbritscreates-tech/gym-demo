@@ -1,21 +1,22 @@
 * {
-    margin: 0;
-    font-family: ;
+  margin: 0;
+  font-family: ;
 }
 
 .navbar {
-    position: fixed;
-    align-items: center;
-    background-color: rgb(30,30,30);
-    width: 100%;
-    z-index: 100;
+  position: fixed;
+  align-items: center;
+  background-color: rgb(30, 30, 30);
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar:hover {
   background-color: white;
 }
 
-.navbar:hover .nav-links a, .dropbtn {
+.navbar:hover .nav-links a,
+.dropbtn {
   color: black;
 }
 
@@ -23,7 +24,8 @@
   color: black;
 }
 
-.navbar:hover .nav-links a:hover, .dropbtn:hover {
+.navbar:hover .nav-links a:hover,
+.dropbtn:hover {
   color: red;
 }
 
@@ -32,20 +34,20 @@
 }
 
 .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-logo {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
 .nav-logo img {
-    width: 450px;
-    height: 70px;
+  width: 450px;
+  height: 70px;
 }
 
 .nav-links {
@@ -55,7 +57,8 @@
   position: relative;
 }
 
-.nav-links a, .dropbtn {
+.nav-links a,
+.dropbtn {
   color: white;
   cursor: pointer;
   text-decoration: none;
@@ -90,73 +93,264 @@
 }
 
 .dropdown-content a img {
-    width: 200px;
-    height: 200px;
-    display: block;
+  width: 200px;
+  height: 200px;
+  display: block;
 }
 
 .overlay-text {
   position: absolute;
-  top: 50%;             /* vertical center */
-  left: 50%;            /* horizontal center */
-  transform: translate(-50%, -50%);  /* perfect centering */
+  top: 50%; /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%, -50%); /* perfect centering */
   color: white;
 }
 
 .dropdown-content-display {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .dropdown-content-box {
-    position: relative;   /* anchor for absolute positioning */
-    display: inline-block;
+  position: relative; /* anchor for absolute positioning */
+  display: inline-block;
 }
 
 .box-text {
-    color: white;
+  color: white;
 }
 
 .menu-toggle {
-    display: none;
+  display: none;
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: rgb(30,30,30);
-    padding: 20px 30px;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(30, 30, 30);
+  padding: 20px 30px;
+  gap: 10px;
 }
 
 .footer-box {
-    flex: 1;
-    border: 1px solid white;
-    text-align: center;
-    height: 250px;
-    padding: 10px 10px;
+  flex: 1;
+  border: 1px solid white;
+  text-align: center;
+  height: 250px;
+  padding: 10px 10px;
 }
 
 .footer-box h3 {
-    color: white;
-    padding: 10px 0;
+  color: white;
+  padding: 10px 0;
 }
 
 .footer-box p {
-    color: white;
+  color: white;
 }
 
 .footer-box a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .footer-box a:hover {
-    color: red;
+  color: red;
+}
+
+.container {
+  background-color: #2e2e2e;
+  padding-bottom: 20px;
+}
+
+.section-title h2 {
+  padding-top: 30px;
+  font-size: 40px; 
+}
+
+.experts {
+  position: relative;
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  height: 300px;
+}
+
+/* Title */
+.experts .section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Ensure container/content sits above background */
+.experts .container {
+  position: relative;
+  z-index: 3;
+}
+
+.cards-section {
+  position: relative;
+  background: no-repeat center/cover;
+  background-color: #2e2e2e;
+  transition: background-image 0.6s ease, opacity 0.6s ease;
+  padding-top: 20px;
+  color: #fff;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+#cards-section::before, #cards-section::after  {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 0;
+}
+
+#cards-section::before {
+  opacity: 1;
+}
+
+#cards-section::after {
+  opacity: 0;
+}
+
+.cards-section .container {
+  position: relative;
+  z-index: 2; /* ensure content sits above bg */
+}
+
+/* Cards layout */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 25px;
+  z-index: 2;
+  position: relative;
+
+}
+
+/* Make sure cards are on top and accept pointer events */
+.card {
+  position: relative; /* creates its own stacking context */
+  z-index: 4; /* above bg and overlay */
+  flex: 1 1 250px;
+  background: rgb(46, 46, 46, 75%);
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  pointer-events: auto; /* ensure they receive hover/clicks */
+  overflow: hidden;
+  max-height: 90px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.card p {
+  font-size: 16px;
+  color: #d3d3d3;
+  margin-bottom: 40px;
+  max-height: 40px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* show only 2 lines */
+  -webkit-box-orient: vertical;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgb(38,38,38);
+  max-height: 400px;
+}
+
+.card:hover p {
+  -webkit-line-clamp: unset; /* remove clamp */
+  overflow: visible;
+}
+
+.card:hover .card-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* active state */
+.card.active {
+  background: rgb(38,38,38);
+  max-height: 400px; /* same as hover expanded */
+  transform: translateY(-6px);
+}
+
+/* Active card should fully mimic hover */
+.card.active {
+  max-height: 400px;          /* expanded height */
+  transform: translateY(-6px); 
+  background: rgb(38,38,38);
+}
+
+/* Paragraph fully visible */
+.card.active p {
+  -webkit-line-clamp: unset;  /* show full text */
+  overflow: visible;
+}
+
+/* Show link immediately for active card */
+.card.active .card-link {
+  opacity: 1 !important;      /* force visible */
+  transform: translateY(0) !important;
+  transition: none;           /* prevent transition delay on load */
+}
+
+/* Hovered card style */
+.card.hovered {
+  max-height: 400px;
+  transform: translateY(-6px);
+  background: rgb(38,38,38);
+}
+
+.card.hovered p {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.card.hovered .card-link {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: none;
 }
 
 
+.card-link {
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgb(89,89,89);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  background-color: rgb(38,38,38);
+}
+
+.card .card-link {
+  display: block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #fff;
+  background: rgb(46, 46, 46);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
